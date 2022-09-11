@@ -30,20 +30,20 @@ class MoviesHome : AppCompatActivity() {
             "Hello This is a movie", "JfVOs4VSpmA",3.5))
         moviesList.add(Movies(R.drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
             "Action", "Russo Brother","2022",
-            "Hello This is a movie", "JfVOs4VSpmA",5.0))
+            "Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgr movie", "JfVOs4VSpmA",5.0))
         moviesList.add(Movies(R.drawable.the_batman, "The Batman", "2h30m",
             "Action", "Kevin","2022",
             "Hello This is a movie","JfVOs4VSpmA", 3.5))
         moviesList.add(Movies(R.drawable.the_irishman, "The Irishman", "3h",
             "Mystery", "Abdelrahman","2019",
-            "Hello This is a movie", "JfVOs4VSpmA", 2.5))
+            "Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgra movie", "JfVOs4VSpmA", 2.5))
 
         moviesList.add(Movies(R.drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
             "Action", "Russo Brother","2019",
             "Hello This is a movie","JfVOs4VSpmA", 5.0))
         moviesList.add(Movies(R.drawable.joker, "Joker", "2h",
             "Comedy", "Steven","2020",
-            "Hello This is a movie","JfVOs4VSpmA",3.5))
+            "Hello This is a ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgrmovie","JfVOs4VSpmA",3.5))
         moviesList.add(Movies(R.drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
             "Action", "Russo Brother","2022",
             "Hello This is a movie","JfVOs4VSpmA",5.0))
