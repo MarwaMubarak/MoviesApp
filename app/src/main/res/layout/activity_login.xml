@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Login_screen.LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#050A30"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="432dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F51B5"
+            android:text="Welcome to Back!"
+            android:textColor="@color/white"
+            android:textSize="39dp"
+
+
+            />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#03A9F4"
+            android:backgroundTint="#EDEDED"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+
+            />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#03A9F4"
+            android:backgroundTint="#EDEDED"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/loginbt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#152373"
+            android:text="Login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     Don't have an account? "
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/CreateAc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#050A30"
+            android:text="Create an account" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
