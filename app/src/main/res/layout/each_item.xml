@@ -8,11 +8,13 @@
     android:layout_marginHorizontal="10dp"
     android:layout_marginVertical="16dp"
     app:cardCornerRadius="20dp"
+    android:background="@color/DarkBlue"
     app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/LightDarkBlue">
 
         <ImageView
             android:id="@+id/iv_poster"
@@ -22,19 +24,19 @@
             android:src="@drawable/spiderman_nowayhome"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="160dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:gravity="center"
-            android:text="Spiderman: No Way Home"
+            android:text="Spiderman: No Wwdfhjfvay Home"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/rat_score"
+            app:layout_constraintBottom_toTopOf="@+id/tv_category"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,59 +45,69 @@
             android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="101dp"
+            android:layout_marginBottom="8dp"
             android:text="1h 12m"
-            android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tv_category"
+            app:layout_constraintBottom_toTopOf="@+id/tv_year"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_category" />
 
         <TextView
             android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="106dp"
             android:text="Action"
-            android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_director"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/tv_director"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_width="181dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="99dp"
+            android:layout_marginEnd="108dp"
             android:text="Russo"
-            android:textColor="@color/black"
-            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_year"
-            app:layout_constraintStart_toEndOf="@+id/tv_category"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/rat_score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_year"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/tv_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="115dp"
+            android:layout_marginBottom="8dp"
             android:gravity="center"
             android:text="2021"
-            android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_director"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_director"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time"
             tools:ignore="MissingConstraints" />
 
         <RatingBar
@@ -103,7 +115,9 @@
             style="?android:attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="36dp"
             android:numStars="5"
             android:progressTint="#FFCC01"
             android:rating="3.5"

@@ -5,32 +5,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
     tools:context=".Movies_Adapter.DetailedMovieActivity">
 
-    <ImageView
-        android:id="@+id/iv_poster_detailed"
-        android:layout_width="0dp"
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtubePlayer"
+        android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="fitXY"
+        android:layout_marginBottom="480dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Play Video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/spiderman_nowayhome" />
-
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_movie_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="320dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_poster_detailed" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_movie_category"
@@ -39,8 +53,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_name" />
@@ -52,8 +66,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_category" />
@@ -65,8 +79,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_director"
@@ -79,8 +93,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_time" />
@@ -92,22 +106,25 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_year" />
 
     <TextView
         android:id="@+id/tv_movie_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="32dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_movie_rating" />
 

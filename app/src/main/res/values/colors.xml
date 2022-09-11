@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightGrey">#D3D3D3</color>
     <color name="duskYellow">#D4CC9A</color>
+    <color name="DarkBlue">#050a30</color>
+    <color name="LightDarkBlue">#000c66</color>
 </resources>

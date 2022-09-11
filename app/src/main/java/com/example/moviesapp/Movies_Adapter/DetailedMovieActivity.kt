@@ -6,11 +6,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.example.moviesapp.R
+import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 
-class DetailedMovieActivity : AppCompatActivity() {
+class DetailedMovieActivity : YouTubeBaseActivity() {
+
+    val YOUTUBE_API_KEY = "AIzaSyDsBGIkjg7UVhMLaAE_q_v8-vxHna3gOMI"
+
+
+    private lateinit var youTubePlayer: YouTubePlayerView
+    private lateinit var btnPlay : Button
+
+    lateinit var youTubePlayerInit : YouTubePlayer.OnInitializedListener
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +37,6 @@ class DetailedMovieActivity : AppCompatActivity() {
             val textViewDescription : TextView =  findViewById(R.id.tv_movie_description)
             val textViewRating : TextView =  findViewById(R.id.tv_movie_rating)
 
-            val imageView : ImageView =  findViewById(R.id.iv_poster_detailed)
-
             val Mname = movie.name
             val Mcategory = movie.category
             val Mtime = movie.time
@@ -46,9 +53,32 @@ class DetailedMovieActivity : AppCompatActivity() {
             textViewYear.text = "Year: $Myear"
             textViewDirector.text = "Director: $Mdirector"
             textViewRating.text = "Rating: $Mrating"
-            textViewDescription.text = Mdescr
-            imageView.setImageResource(movie.image)
-        }
+            textViewDescription.text = "Description: $Mdescr"
 
+            youTubePlayer = findViewById(R.id.youtubePlayer)
+
+            btnPlay = findViewById(R.id.btnPlay)
+
+            youTubePlayerInit = object :  YouTubePlayer.OnInitializedListener {
+                override fun onInitializationSuccess(
+                    p0: YouTubePlayer.Provider?,
+                    p1: YouTubePlayer?,
+                    p2: Boolean
+                ) {
+                    p1?.loadVideo(Mtrailer)
+                }
+
+                override fun onInitializationFailure(
+                    p0: YouTubePlayer.Provider?,
+                    p1: YouTubeInitializationResult?
+                ) {
+                    Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+            btnPlay.setOnClickListener{
+                youTubePlayer.initialize(YOUTUBE_API_KEY, youTubePlayerInit)
+            }
+        }
     }
 }
