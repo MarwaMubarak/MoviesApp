@@ -3,16 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_movie_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_stars_24.xml" value="0.109" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_detailed_movie.xml" value="0.1796875" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_movies_home.xml" value="0.17798913043478262" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_register.xml" value="0.3333333333333333" />
-<!--<<<<<<< Updated upstream-->
-        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/each_item.xml" value="0.17798913043478262" />
-        <entry key="..\:/Users/user/BM/MoviesApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
-=======
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/each_item.xml" value="0.14666666666666667" />
->>>>>>> Stashed changes
+        <entry key="..\:/Users/user/BM/MoviesApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
       </map>
     </option>
   </component>
