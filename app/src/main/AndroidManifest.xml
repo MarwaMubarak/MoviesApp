@@ -22,13 +22,16 @@
         android:theme="@style/Theme.MoviesApp"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Login_screen.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".register_screen.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".splash_screen.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

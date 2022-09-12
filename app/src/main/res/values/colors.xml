@@ -11,4 +11,7 @@
     <color name="duskYellow">#D4CC9A</color>
     <color name="DarkBlue">#050a30</color>
     <color name="LightDarkBlue">#000c66</color>
+    <color name="darkBlue1">#010057</color>
+    <color name="darkBlue2">#001B3A</color>
+    <color name="lightBlue2">#02006c</color>
 </resources>
