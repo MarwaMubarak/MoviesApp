@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MoviesHome : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
