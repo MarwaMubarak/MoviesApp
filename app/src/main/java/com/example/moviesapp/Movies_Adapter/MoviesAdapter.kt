@@ -1,5 +1,6 @@
 package com.example.moviesapp.Movies_Adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,9 +22,9 @@ class MoviesAdapter(private val moviesList:ArrayList<Movies>)
         val name: TextView = itemView.findViewById(R.id.tv_name)
         val time: TextView = itemView.findViewById(R.id.tv_time)
         val category: TextView = itemView.findViewById(R.id.tv_category)
-        val director: TextView = itemView.findViewById(R.id.tv_director)
         val year: TextView = itemView.findViewById(R.id.tv_year)
-        val rating: RatingBar = itemView.findViewById(R.id.rat_score)
+//        val rating: RatingBar = itemView.findViewById(R.id.rat_score)
+        val tvRating : TextView = itemView.findViewById((R.id.tv_rating))
 
 
     }
@@ -34,16 +35,17 @@ class MoviesAdapter(private val moviesList:ArrayList<Movies>)
         return MoviesViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int)
     {
         val movies = moviesList[position]
         holder.poster.setImageResource(movies.image)
         holder.name.text = movies.name
-        holder.time.text = movies.time
-        holder.category.text = movies.category
-        holder.director.text = movies.director
-        holder.year.text = movies.year
-        holder.rating.rating = movies.rating.toFloat()
+        holder.time.text = "        ${movies.time}"
+        holder.category.text = "        ${movies.category}"
+        holder.year.text = "        ${movies.year}"
+        holder.tvRating.text = "        ${movies.rating.toFloat()}"
+//        holder.rating.rating = movies.rating.toFloat()
 
         holder.itemView.setOnClickListener{
             onItemClick?.invoke(movies)

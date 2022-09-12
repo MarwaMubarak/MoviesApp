@@ -31,8 +31,7 @@ class DetailedMovieActivity : YouTubeBaseActivity() {
         if(movie != null){
             val textViewName : TextView =  findViewById(R.id.tv_movie_name)
             val textViewCategory : TextView =  findViewById(R.id.tv_movie_category)
-            val textViewTime : TextView =  findViewById(R.id.tv_movie_time)
-            val textViewYear : TextView =  findViewById(R.id.tv_movie_year)
+            val textViewYear : TextView =  findViewById(R.id.tv_movie_year_time)
             val textViewDirector : TextView =  findViewById(R.id.tv_movie_director)
             val textViewDescription : TextView =  findViewById(R.id.tv_movie_description)
             val textViewRating : TextView =  findViewById(R.id.tv_movie_rating)
@@ -47,12 +46,11 @@ class DetailedMovieActivity : YouTubeBaseActivity() {
             val Mtrailer = movie.trailer
 
 
-            textViewName.text = "Title: $Mname"
-            textViewCategory.text = "Category: $Mcategory"
-            textViewTime.text = "Time: $Mtime"
-            textViewYear.text = "Year: $Myear"
-            textViewDirector.text = "Director: $Mdirector"
-            textViewRating.text = "Rating: $Mrating"
+            textViewName.text = Mname
+            textViewCategory.text = Mcategory
+            textViewYear.text = "$Myear - $Mtime"
+            textViewDirector.text = "Director - $Mdirector"
+            textViewRating.text = Mrating.toString()
             textViewDescription.text = "Description: $Mdescr"
 
             youTubePlayer = findViewById(R.id.youtubePlayer)
