@@ -1,20 +1,19 @@
-package com.example.moviesapp.Movies_Adapter
+package com.example.moviesapp.presentation.ui.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RatingBar
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
+import com.example.moviesapp.presentation.ViewModels.MovieModel
 
-class MoviesAdapter(private val moviesList:ArrayList<Movies>)
-    : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>()
+class MoviesListAdapter(private val moviesList:ArrayList<MovieModel>)
+    : RecyclerView.Adapter<MoviesListAdapter.MoviesViewHolder>()
 {
-    var onItemClick : ((Movies) -> Unit)? = null
+    var onItemClick : ((MovieModel) -> Unit)? = null
 
     class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
@@ -31,7 +30,7 @@ class MoviesAdapter(private val moviesList:ArrayList<Movies>)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder
     {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.each_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_component, parent, false)
         return MoviesViewHolder(view)
     }
 

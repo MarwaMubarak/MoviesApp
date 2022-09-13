@@ -6,15 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Movies_Adapter.DetailedMovieActivity"
-    android:id="@+id/Favourites">
+    tools:context=".presentation.ui.activity.MovieActivity"
+    android:id="@+id/Favourites"
+   >
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtubePlayer"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="240dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/lightOrange"
+        android:backgroundTint="@color/darkOrange"
         android:text="Play Video"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="@color/white"
+        android:textColor="@color/darkOrange"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_movie_year_time"
@@ -64,7 +65,7 @@
         android:layout_marginBottom="32dp"
         android:text="button"
         android:background="@drawable/round_btn"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_movie_description"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
         android:layout_marginEnd="177dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="5dp"
         android:text="TextView"
         android:textColor="@color/white"
         android:textSize="12sp"
@@ -95,7 +96,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="24dp"
         android:text="hsbvjhsvb"
-        android:textColor="@color/lightOrange"
+        android:textColor="@color/darkOrange"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_movie_category"
         app:layout_constraintEnd_toStartOf="@+id/tv_movie_rating"
@@ -139,6 +140,5 @@
         android:rating="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPlay" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

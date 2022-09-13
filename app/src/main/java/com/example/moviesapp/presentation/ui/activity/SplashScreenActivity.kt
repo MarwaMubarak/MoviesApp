@@ -1,12 +1,11 @@
-package com.example.moviesapp.splash_screen
+package com.example.moviesapp.presentation.ui.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import com.example.moviesapp.Login_screen.LoginActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.moviesapp.R
 
 @SuppressLint("CustomSplashScreen")
@@ -20,8 +19,6 @@ class SplashScreenActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        // we used the postDelayed(Runnable, time) method
-        // to send a message with a delayed time.
         Handler().postDelayed({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

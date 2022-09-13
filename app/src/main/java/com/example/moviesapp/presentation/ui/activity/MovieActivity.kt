@@ -1,17 +1,18 @@
-package com.example.moviesapp.Movies_Adapter
+package com.example.moviesapp.presentation.ui.activity
 
 import android.annotation.SuppressLint
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import com.example.moviesapp.R
+import com.example.moviesapp.presentation.ViewModels.MovieModel
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 
-class DetailedMovieActivity : YouTubeBaseActivity() {
+class MovieActivity : YouTubeBaseActivity() {
 
     val YOUTUBE_API_KEY = "AIzaSyDsBGIkjg7UVhMLaAE_q_v8-vxHna3gOMI"
 
@@ -24,10 +25,10 @@ class DetailedMovieActivity : YouTubeBaseActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detailed_movie)
+        setContentView(R.layout.activity_movie)
 
 
-        val movie = intent.getParcelableExtra<Movies>("Movie")
+        val movie = intent.getParcelableExtra<MovieModel>("Movie")
         if(movie != null){
             val textViewName : TextView =  findViewById(R.id.tv_movie_name)
             val textViewCategory : TextView =  findViewById(R.id.tv_movie_category)

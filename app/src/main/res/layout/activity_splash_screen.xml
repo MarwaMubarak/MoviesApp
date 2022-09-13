@@ -4,18 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splash_screen.SplashScreenActivity"
+    tools:context=".presentation.ui.activity.SplashScreenActivity"
+    android:background="@color/orange"
     >
     <ImageView
+        android:id="@+id/movie_icon"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_play_circle_outline"
+        android:src="@drawable/ic_dark_orange_movie"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
-
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_icon"
+            android:text="Movie App"
+            android:textStyle="bold"
+            android:textSize="45dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:textColor="@color/darkOrange"
+            />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

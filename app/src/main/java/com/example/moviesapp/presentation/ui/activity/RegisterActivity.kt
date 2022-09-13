@@ -1,17 +1,13 @@
-package com.example.moviesapp.register_screen
+package com.example.moviesapp.presentation.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.moviesapp.Login_screen.LoginActivity
-import com.example.moviesapp.Movies_Adapter.MoviesHome
+import androidx.appcompat.app.AppCompatActivity
 import com.example.moviesapp.R
-import java.time.Duration
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
                     Toast.makeText(this,"Password does not match!!", Toast.LENGTH_SHORT).show()
 
                 }else {
-                    val intent = Intent(this, MoviesHome::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     Toast.makeText(this, "Successful Registration..", Toast.LENGTH_SHORT).show()
                     startActivity(intent)
                 }
