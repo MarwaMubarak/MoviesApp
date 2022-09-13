@@ -10,4 +10,15 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="actors">Actors</string>
+    <string name="favorites">Favorites</string>
+    <string name="movies">Movies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="doesn_t_have_an_account">Doesn\'t have an account?</string>
+    <string name="welcome_back">Welcome Back!</string>
 </resources>

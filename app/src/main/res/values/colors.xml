@@ -15,5 +15,17 @@
     <color name="darkBlue2">#001B3A</color>
     <color name="lightBlue2">#02006c</color>
     <color name="lightOrange">#FF8C00</color>
->>>>>>> 17b42baad7a468f6bfced03b22ab6908cb23c1aa
+    <color name="darkOrange">#6E2C00</color>
+
+    <color name="darkOrange2">#583E26</color>
+
+
+<!--    <color name="black2">#635A58</color>-->
+    <color name="orange">#F6DDCC</color>
+<!--    <color name="black2">#EDBB99</color>-->
+
+
+
+
+
 </resources>

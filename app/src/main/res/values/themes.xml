@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.MoviesApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/lightBlue2</item>
-        <item name="colorPrimaryVariant">@color/darkBlue1</item>
+        <item name="colorPrimary">@color/darkOrange</item>
+        <item name="colorPrimaryVariant">@color/darkOrange</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="buttonTint">@color/lightBlue2</item>
+        <item name="buttonTint">@color/darkOrange</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
