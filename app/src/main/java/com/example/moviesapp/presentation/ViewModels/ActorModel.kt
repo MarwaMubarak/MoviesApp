@@ -7,4 +7,4 @@ data class ActorModel(
     val image:Int,
     val name:String,
     val id:Int,
-    val moviesList:String):Parcelable
+    val moviesList:ArrayList<MovieModel>):Parcelable

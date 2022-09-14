@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.moviesapp.R
-import com.example.moviesapp.data.Models.ActorModel
+import com.example.moviesapp.presentation.ViewModels.ActorModel
 import de.hdodenhof.circleimageview.CircleImageView
 
-class ActorDetailsActivity : AppCompatActivity() {
+class ActorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actor)

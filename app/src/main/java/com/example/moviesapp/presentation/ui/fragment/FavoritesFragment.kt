@@ -1,5 +1,6 @@
 package com.example.moviesapp.presentation.ui.fragment
 
+import FavListAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
 import com.example.moviesapp.data.singlton.Favorites
 import com.example.moviesapp.presentation.ui.activity.MovieActivity
-import com.example.moviesapp.presentation.ui.adapter.MoviesListAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var favAdapter: MoviesListAdapter
+    private lateinit var favAdapter: FavListAdapter
     private val fav= Favorites()
 
 
@@ -50,7 +50,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
         recyclerView = view.findViewById(R.id.rv_fav)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        favAdapter = MoviesListAdapter(fav.getAllList())
+        favAdapter = FavListAdapter(fav.getAllList())
         ///TODO
         recyclerView.adapter = favAdapter
         favAdapter.onItemClick = {

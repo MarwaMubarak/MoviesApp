@@ -1,4 +1,3 @@
-package com.example.moviesapp.presentation.ui.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -8,12 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.data.Models.MoviesResponse
 import com.example.moviesapp.presentation.ViewModels.MovieModel
 import com.squareup.picasso.Picasso
 
-class MoviesListAdapter(var moviesList:List<MoviesResponse?>?)
-    : RecyclerView.Adapter<MoviesListAdapter.MoviesViewHolder>()
+class FavListAdapter(private val moviesList:ArrayList<MovieModel>)
+    : RecyclerView.Adapter<FavListAdapter
+.MoviesViewHolder>()
 {
     var onItemClick : ((MovieModel) -> Unit)? = null
 
@@ -24,7 +23,7 @@ class MoviesListAdapter(var moviesList:List<MoviesResponse?>?)
         val time: TextView = itemView.findViewById(R.id.tv_time)
         val category: TextView = itemView.findViewById(R.id.tv_category)
         val year: TextView = itemView.findViewById(R.id.tv_year)
-//        val rating: RatingBar = itemView.findViewById(R.id.rat_score)
+        //        val rating: RatingBar = itemView.findViewById(R.id.rat_score)
         val tvRating : TextView = itemView.findViewById((R.id.tv_rating))
 
 
@@ -39,34 +38,23 @@ class MoviesListAdapter(var moviesList:List<MoviesResponse?>?)
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int)
     {
-        val movies = moviesList?.get(position)
-        Picasso.get().load(movies?.movieImageUrl).into(holder.poster)
-        //holder.poster.setImageResource(movies?.image!!)
-        holder.name.text = movies?.movieName
-        holder.time.text = "        ${movies?.movieDuration}"
-        holder.category.text = "        ${movies?.movieCategory}"
-        holder.year.text = "        ${movies?.movieProductionYear}"
-        holder.tvRating.text = "        ${movies?.movieRating?.toFloat()}"
+        val movies = moviesList[position]
+        Picasso.get().load(movies?.image).into(holder.poster)
+//        holder.poster.setImageResource(movies.image)
+        holder.name.text = movies.name
+        holder.time.text = "        ${movies.time}"
+        holder.category.text = "        ${movies.category}"
+        holder.year.text = "        ${movies.year}"
+        holder.tvRating.text = "        ${movies.rating?.toFloat()}"
 //        holder.rating.rating = movies.rating.toFloat()
 
         holder.itemView.setOnClickListener{
-            val movieModel=MovieModel(
-                name = movies?.movieName,
-                category = movies?.movieCategory,
-                time =  movies?.movieDuration,
-                director = movies?.directorName,
-                year = movies?.movieProductionYear,
-                description = movies?.movieDescription,
-                rating = movies?.movieRating,
-                trailer = movies?.movieVideoUrl,
-                image = movies?.movieImageUrl
-            )
-            onItemClick?.invoke(movieModel)
+            onItemClick?.invoke(movies)
         }
     }
 
     override fun getItemCount(): Int
     {
-        return moviesList?.size?:0
+        return moviesList.size
     }
 }
