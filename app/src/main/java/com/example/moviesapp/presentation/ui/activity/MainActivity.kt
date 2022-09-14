@@ -1,6 +1,7 @@
 package com.example.moviesapp.presentation.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.moviesapp.R
@@ -11,6 +12,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     var saved:Fragment?=null
+    private val TAG = "QuizActivity"
+    private val KEY_INDEX = "index"
+    var mCurrentIndex=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,27 +22,35 @@ class MainActivity : AppCompatActivity() {
         val moviesFragment= MoviesFragment()
         val actorsFragment=ActorsFragment()
         val favoritesFragment=FavoritesFragment()
-        if(saved==null) {
-            saved=moviesFragment
-            setCurrentFragment(moviesFragment)
-        }else{
-            println(saved)
-            setCurrentFragment(saved!!)
+        if (savedInstanceState != null) {
+             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
         }
 
+        when (mCurrentIndex) {
+
+            0 -> {
+                setCurrentFragment(MoviesFragment())
+            }
+            1 -> {
+                setCurrentFragment(ActorsFragment())
+            }
+            2 -> {
+                setCurrentFragment(FavoritesFragment())
+            }
+        }
         val bottomNavigationView=findViewById<BottomNavigationView>(R.id.navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_movies-> {
-                   saved=moviesFragment
+                    mCurrentIndex=0
                     setCurrentFragment(moviesFragment)
                 }
                 R.id.navigation_actors-> {
-                    saved=actorsFragment
+                    mCurrentIndex=1
                     setCurrentFragment(actorsFragment)
                 }
                 R.id.navigation_fav-> {
-                    saved=favoritesFragment
+                    mCurrentIndex=2
                     setCurrentFragment(favoritesFragment)
                 }
 
@@ -48,11 +60,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-//    override fun onResume() {
-//        super.onResume()
 
-//        setCurrentFragment(saved!!)
-//    }
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        super.onSaveInstanceState(savedInstanceState)
+        Log.i(TAG, "onSaveInstanceState")
+        savedInstanceState.putInt(KEY_INDEX, mCurrentIndex)
+    }
+
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.f,fragment)
