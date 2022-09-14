@@ -2,7 +2,7 @@ package com.example.moviesapp.data.singlton
 
 import com.example.moviesapp.data.Models.MovieModel
 
-class favorites {
+class Favorites {
 
     companion object{
         var favList :ArrayList<MovieModel> = ArrayList()

@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.data.singlton.favorites
+import com.example.moviesapp.data.singlton.Favorites
 import com.example.moviesapp.presentation.ui.activity.MovieActivity
 import com.example.moviesapp.presentation.ui.adapter.MoviesListAdapter
 
@@ -27,7 +27,7 @@ private const val ARG_PARAM2 = "param2"
 class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
     private lateinit var recyclerView: RecyclerView
     private lateinit var favAdapter: MoviesListAdapter
-    private val fav= favorites()
+    private val fav= Favorites()
 
 
     // TODO: Rename and change types of parameters
@@ -55,7 +55,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
         recyclerView.adapter = favAdapter
         favAdapter.onItemClick = {
             val intent = Intent(context, MovieActivity::class.java)
-            intent.putExtra("Fav", it)
+            intent.putExtra("Movie", it)
             startActivity(intent)
         }
 

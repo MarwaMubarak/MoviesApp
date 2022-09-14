@@ -6,8 +6,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.moviesapp.R
-import com.example.moviesapp.data.singlton.favorites
 import com.example.moviesapp.data.Models.MovieModel
+import com.example.moviesapp.data.singlton.Favorites
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
@@ -17,7 +17,7 @@ class MovieActivity : YouTubeBaseActivity() {
 
     val YOUTUBE_API_KEY = "AIzaSyDsBGIkjg7UVhMLaAE_q_v8-vxHna3gOMI"
 
-    private var favList = favorites()
+    private var favList = Favorites()
     private lateinit var youTubePlayer: YouTubePlayerView
     private lateinit var btnPlay : Button
 
