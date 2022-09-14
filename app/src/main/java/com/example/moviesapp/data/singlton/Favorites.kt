@@ -1,4 +1,4 @@
-package com.example.moviesapp.data
+package com.example.moviesapp.data.singlton
 
 import com.example.moviesapp.presentation.ViewModels.MovieModel
 
