@@ -8,10 +8,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.POST
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 //https://our-movie-service.herokuapp.com/Users/login
 //https://our-movie-service.herokuapp.com/Users/register
