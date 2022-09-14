@@ -25,6 +25,9 @@
             android:name=".presentation.ui.activity.MainActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.ui.activity.ActorActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.ui.activity.LoginActivity"
             android:exported="false" />
         <activity

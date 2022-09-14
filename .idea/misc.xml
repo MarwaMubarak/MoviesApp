@@ -3,24 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1285" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1285" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.109" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_movie_24.xml" value="0.109" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.109" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.109" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_stars_24.xml" value="0.109" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_baseline_thumbs_up_down_24.xml" value="0.1285" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_dark_orange_movie.xml" value="0.105" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_darkblue_person_outline.xml" value="0.105" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.105" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_email.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_lock.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_lock_open.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_person.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_person_outline.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_play_circle_outline.xml" value="0.1285" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/ic_white_person_outline.xml" value="0.1285" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/drawable/round_btn.xml" value="0.105" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_actor.xml" value="0.13333333333333333" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_actor_profile.xml" value="0.15052083333333333" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_actors_list.xml" value="0.11822916666666666" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_detailed_movie.xml" value="0.1796875" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_movie.xml" value="0.1671195652173913" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_movie.xml" value="0.22" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_movies_home.xml" value="0.17798913043478262" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_movies_list.xml" value="0.1" />
-        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_register.xml" value="0.3333333333333333" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_register.xml" value="0.14666666666666667" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/actor_component.xml" value="0.16666666666666666" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/each_item.xml" value="0.14666666666666667" />
@@ -30,7 +47,7 @@
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/fragment_home.xml" value="0.15729166666666666" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/fragment_movies.xml" value="0.1671195652173913" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/fragment_notifications.xml" value="0.15729166666666666" />
-        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/movie_component.xml" value="0.1671195652173913" />
+        <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/layout/movie_component.xml" value="0.3333333333333333" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/menu/bottom_nav.xml" value="0.11822916666666666" />
         <entry key="..\:/BankMisrAndroidInternship/MoviesApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/user/BM/MoviesApp/app/src/main/res/layout/activity_login.xml" value="0.264" />

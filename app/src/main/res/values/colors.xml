@@ -16,15 +16,15 @@
     <color name="lightBlue2">#02006c</color>
     <color name="lightOrange">#FF8C00</color>
     <color name="darkOrange">#6E2C00</color>
-
     <color name="darkOrange2">#583E26</color>
-
-
-<!--    <color name="black2">#635A58</color>-->
     <color name="orange">#F6DDCC</color>
-<!--    <color name="black2">#EDBB99</color>-->
-
-
+    <!--                                    -->
+    <color name="background">#141414</color>
+    <color name="btn_icon">#800000 </color>
+    <color name="big_txt">#3D0000</color>
+    <color name="card_nav_menu">#2E2E2E</color>
+    <color name="rare">#AE0000 </color>
+    <color name="description">#f5f5f5</color>
 
 
 

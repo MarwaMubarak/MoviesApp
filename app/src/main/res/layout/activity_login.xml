@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".presentation.ui.activity.LoginActivity"
-    android:background="@color/orange">
+    android:background="@color/background">
 
 
     <TextView
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/g2"
         android:gravity="left"
-        android:textColor="@color/darkOrange"
+        android:textColor="@color/btn_icon"
         android:textStyle="bold"
         android:textSize="40dp"
         android:layout_marginBottom="15dp"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/g2"
         app:startIconDrawable="@drawable/ic_email"
-        app:startIconTint="@color/darkOrange"
+        app:startIconTint="@color/btn_icon"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
@@ -71,7 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til_email2"
         app:startIconDrawable="@drawable/ic_lock"
-        app:startIconTint="@color/darkOrange"
+        app:startIconTint="@color/btn_icon"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
@@ -98,7 +98,7 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/darkOrange"
+        android:backgroundTint="@color/btn_icon"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="32dp"
         android:text="@string/doesn_t_have_an_account"
-        android:textColor="@color/darkOrange"
+        android:textColor="@color/btn_icon"
         app:layout_constraintEnd_toStartOf="@id/tv_register2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +125,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="52dp"
         android:text="@string/register"
-        android:textColor="@color/darkOrange"
+        android:textColor="@color/btn_icon"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

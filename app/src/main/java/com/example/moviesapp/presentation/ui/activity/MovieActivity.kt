@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.moviesapp.R
+import com.example.moviesapp.data.favorites
 import com.example.moviesapp.presentation.ViewModels.MovieModel
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
@@ -16,7 +17,7 @@ class MovieActivity : YouTubeBaseActivity() {
 
     val YOUTUBE_API_KEY = "AIzaSyDsBGIkjg7UVhMLaAE_q_v8-vxHna3gOMI"
 
-
+    private var favList = favorites()
     private lateinit var youTubePlayer: YouTubePlayerView
     private lateinit var btnPlay : Button
 
@@ -29,6 +30,7 @@ class MovieActivity : YouTubeBaseActivity() {
 
 
         val movie = intent.getParcelableExtra<MovieModel>("Movie")
+
         if(movie != null){
             val textViewName : TextView =  findViewById(R.id.tv_movie_name)
             val textViewCategory : TextView =  findViewById(R.id.tv_movie_category)
@@ -36,7 +38,10 @@ class MovieActivity : YouTubeBaseActivity() {
             val textViewDirector : TextView =  findViewById(R.id.tv_movie_director)
             val textViewDescription : TextView =  findViewById(R.id.tv_movie_description)
             val textViewRating : TextView =  findViewById(R.id.tv_movie_rating)
-
+            val favBtn:Button = findViewById(R.id.btn_addToFavourites)
+            if(favList.found(movie!!)){
+                favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_24))
+            }
             val Mname = movie.name
             val Mcategory = movie.category
             val Mtime = movie.time
@@ -45,7 +50,6 @@ class MovieActivity : YouTubeBaseActivity() {
             val Mrating = movie.rating
             val Mdescr = movie.description
             val Mtrailer = movie.trailer
-
 
             textViewName.text = Mname
             textViewCategory.text = Mcategory
@@ -66,18 +70,25 @@ class MovieActivity : YouTubeBaseActivity() {
                 ) {
                     p1?.loadVideo(Mtrailer)
                 }
-
-                override fun onInitializationFailure(
-                    p0: YouTubePlayer.Provider?,
-                    p1: YouTubeInitializationResult?
-                ) {
+                override fun onInitializationFailure(p0: YouTubePlayer.Provider?, p1: YouTubeInitializationResult?) {
                     Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
                 }
-
             }
             btnPlay.setOnClickListener{
                 youTubePlayer.initialize(YOUTUBE_API_KEY, youTubePlayerInit)
             }
+
+            favBtn.setOnClickListener {
+                if(!favList.found(movie)) {
+                    favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_24))
+                    favList.add(movie)
+                }else{
+                    favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_border_24))
+                    favList.remove(movie)
+                }
+
+            }
+
         }
     }
 }

@@ -24,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"
-        android:background="@color/orange"
+        android:background="@color/card_nav_menu"
         />
 
 

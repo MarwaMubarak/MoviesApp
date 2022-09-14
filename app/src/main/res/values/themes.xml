@@ -2,10 +2,14 @@
     <!-- Base application theme. -->
     <style name="Theme.MoviesApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/darkOrange</item>
-        <item name="colorPrimaryVariant">@color/darkOrange</item>
+        <item name="colorPrimary">@color/btn_icon</item>
+        <item name="colorPrimaryVariant">@color/btn_icon</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="buttonTint">@color/darkOrange</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="buttonTint">@color/btn_icon</item>
+        <item name="android:navigationBarColor">@color/card_nav_menu</item>
+
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

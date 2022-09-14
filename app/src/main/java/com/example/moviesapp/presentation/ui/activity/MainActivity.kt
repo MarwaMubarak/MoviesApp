@@ -10,6 +10,7 @@ import com.example.moviesapp.presentation.ui.fragment.MoviesFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+    var saved:Fragment?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,19 +18,27 @@ class MainActivity : AppCompatActivity() {
         val moviesFragment= MoviesFragment()
         val actorsFragment=ActorsFragment()
         val favoritesFragment=FavoritesFragment()
-
-        setCurrentFragment(moviesFragment)
+        if(saved==null) {
+            saved=moviesFragment
+            setCurrentFragment(moviesFragment)
+        }else{
+            println(saved)
+            setCurrentFragment(saved!!)
+        }
 
         val bottomNavigationView=findViewById<BottomNavigationView>(R.id.navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_movies-> {
+                   saved=moviesFragment
                     setCurrentFragment(moviesFragment)
                 }
                 R.id.navigation_actors-> {
+                    saved=actorsFragment
                     setCurrentFragment(actorsFragment)
                 }
                 R.id.navigation_fav-> {
+                    saved=favoritesFragment
                     setCurrentFragment(favoritesFragment)
                 }
 
@@ -39,6 +48,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+//    override fun onResume() {
+//        super.onResume()
+
+//        setCurrentFragment(saved!!)
+//    }
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.f,fragment)

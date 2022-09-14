@@ -8,12 +8,14 @@
     android:layout_marginVertical="16dp"
     android:background="@color/black"
     app:cardCornerRadius="20dp"
-    app:cardElevation="4dp">
+    app:cardElevation="4dp"
+    android:id="@+id/movieComp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/orange">
+        android:background="@color/card_nav_menu">
 
 
         <ImageView
@@ -35,7 +37,7 @@
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:text="Spiderman: No Way Home"
-            android:textColor="@color/black"
+            android:textColor="@color/big_txt"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +53,7 @@
             android:drawableLeft="@drawable/ic_baseline_access_time_24"
             android:gravity="left"
             android:text="1h 12m"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
@@ -65,7 +67,7 @@
             android:layout_marginTop="130dp"
             android:drawableLeft="@drawable/ic_baseline_category_24"
             android:text="Action"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
@@ -81,25 +83,13 @@
             android:drawableLeft="@drawable/ic_baseline_date_range_24"
             android:gravity="center"
             android:text="2021"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <!--        <RatingBar-->
-        <!--            android:id="@+id/rat_score"-->
-        <!--            style="?android:attr/ratingBarStyleSmall"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginBottom="18dp"-->
-        <!--            android:numStars="1"-->
-        <!--            android:progressTint="@color/black"-->
-        <!--            android:rating="1"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintStart_toEndOf="@+id/tv_rating"-->
-        <!--            tools:ignore="MissingConstraints" />-->
 
         <TextView
             android:id="@+id/tv_rating"
@@ -109,7 +99,7 @@
             android:layout_marginBottom="14dp"
             android:drawableLeft="@drawable/ic_baseline_star_rate_24"
             android:text="ay haga"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

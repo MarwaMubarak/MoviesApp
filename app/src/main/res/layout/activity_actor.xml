@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".presentation.ui.activity.ActorActivity"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/acp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:backgroundTint="@color/background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/btn_icon" />
+
+        <TextView
+            android:id="@+id/actor_name"
+            android:layout_width="308dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="193dp"
+            android:layout_marginBottom="500dp"
+            android:gravity="center_vertical"
+            android:text="Actor Name"
+            android:textColor="@color/big_txt"
+            android:textSize="20dp" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/About"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_marginStart="50dp"-->
+        <!--            android:layout_marginTop="306dp"-->
+        <!--            android:layout_marginBottom="406dp"-->
+        <!--            android:text="About :"-->
+        <!--            android:textColor="@color/white" />-->
+
+        <TextView
+            android:id="@+id/MoviesMade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="418dp"
+            android:text="Movies :"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/moviesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="363dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:text="ahhh"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:elevation="15dp"
+        android:padding="5dp"
+        android:src="@drawable/download"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+</RelativeLayout>

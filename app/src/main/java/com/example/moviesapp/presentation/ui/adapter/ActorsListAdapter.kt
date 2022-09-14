@@ -1,5 +1,6 @@
 package com.example.moviesapp.presentation.ui.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,58 +8,38 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
+import com.example.moviesapp.presentation.ViewModels.ActorModel
 
-class ActorsListAdapter: RecyclerView.Adapter<ActorsListAdapter.ViewHolder>() {
+class ActorsListAdapter(private val actorsList:ArrayList<ActorModel>)
+    : RecyclerView.Adapter<ActorsListAdapter.ActorsViewHolder>() {
+    var onItemClick : ((ActorModel) -> Unit)? = null
+     class ActorsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+         val image: ImageView = itemView.findViewById(R.id.profile_image)
+         val name: TextView = itemView.findViewById(R.id.tv_name)
+        // val movies: TextView = itemView.findViewById(R.id.moviesList)
 
-    private var texts = arrayOf(
-        "Karim Abdelazeez",
-        "Ahmed Ezz",
-        "Tobey Macguir",
-        "Jonney Cage",
-        "text6",
-        "text7",
-        "text9",
-        "text10"
-    )
-    private var images = arrayOf(
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download,
-        R.drawable.download
-    )
 
+     }
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ViewHolder {
+    ): ActorsViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.actor_component, parent, false)
-        return ViewHolder(v)
+        return ActorsViewHolder(v)
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.txtv.text=texts[position]
-        holder.itimg.setImageResource(images[position])
+    @SuppressLint("SetTextI18n")
+    override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
+        holder.name.text=actorsList[position].name
+        holder.image.setImageResource(actorsList[position].image)
+        //holder.movies.text=actorsList[position].moviesList
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(actorsList[position])
+        }
     }
 
     override fun getItemCount(): Int {
-        return texts.size
+        return actorsList.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var itimg: ImageView
-        var txtv: TextView
 
-        init {
-            itimg = itemView.findViewById(R.id.profile_image)
-            txtv = itemView.findViewById(R.id.tv_name)
-
-
-        }
-    }
 }
