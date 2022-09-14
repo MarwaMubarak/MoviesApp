@@ -5,13 +5,10 @@ import com.example.moviesapp.data.Models.LoginResponse
 import com.example.moviesapp.data.Models.RegisterRequest
 import com.example.moviesapp.data.Models.RegisterResponse
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.POST
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Header
-
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 //https://our-movie-service.herokuapp.com/Users/login
 //https://our-movie-service.herokuapp.com/Users/register

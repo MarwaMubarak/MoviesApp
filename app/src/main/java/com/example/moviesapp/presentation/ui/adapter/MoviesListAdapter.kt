@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.presentation.ViewModels.MovieModel
+import com.example.moviesapp.data.Models.MovieModel
 
 class MoviesListAdapter(private val moviesList:ArrayList<MovieModel>)
     : RecyclerView.Adapter<MoviesListAdapter.MoviesViewHolder>()

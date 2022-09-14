@@ -7,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.moviesapp.R
 import com.example.moviesapp.data.singlton.favorites
-import com.example.moviesapp.presentation.ViewModels.MovieModel
+import com.example.moviesapp.data.Models.MovieModel
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer

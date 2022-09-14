@@ -9,7 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
-import com.example.moviesapp.presentation.ViewModels.MovieModel
+import com.example.moviesapp.R.drawable
+import com.example.moviesapp.data.Models.MovieModel
 import com.example.moviesapp.presentation.ui.activity.MovieActivity
 import com.example.moviesapp.presentation.ui.adapter.MoviesListAdapter
 
@@ -50,53 +51,63 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         moviesList = ArrayList()
 
         moviesList.add(
-            MovieModel(R.drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
+            MovieModel(
+              drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
                 "Action", "Russo Brother","2019",
                 "Hello This is a movie", "JfVOs4VSpmA", 5.0)
         )
         moviesList.add(
-            MovieModel(R.drawable.joker, "Joker", "2h",
+            MovieModel(
+              drawable.joker, "Joker", "2h",
                 "Comedy", "Steven","2020",
                 "Hello This is a movie", "JfVOs4VSpmA",3.5)
         )
         moviesList.add(
-            MovieModel(R.drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
+            MovieModel(
+              drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
                 "Action", "Russo Brother","2022",
                 "Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgr movie", "JfVOs4VSpmA",5.0)
         )
         moviesList.add(
-            MovieModel(R.drawable.the_batman, "The Batman", "2h30m",
+            MovieModel(
+              drawable.the_batman, "The Batman", "2h30m",
                 "Action", "Kevin","2022",
                 "Hello This is a movie","JfVOs4VSpmA", 3.5)
         )
         moviesList.add(
-            MovieModel(R.drawable.the_irishman, "The Irishman", "3h",
+            MovieModel(
+              drawable.the_irishman, "The Irishman", "3h",
                 "Mystery", "Abdelrahman","2019",
                 "Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgra movie", "JfVOs4VSpmA", 2.5)
         )
 
         moviesList.add(
-            MovieModel(R.drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
+            MovieModel(
+              drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
                 "Action", "Russo Brother","2019",
                 "Hello This is a movie","JfVOs4VSpmA", 5.0)
         )
         moviesList.add(
-            MovieModel(R.drawable.joker, "Joker", "2h",
+            MovieModel(
+              drawable.joker, "Joker", "2h",
                 "Comedy", "Steven","2020",
                 "Hello This is a ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgrmovie","JfVOs4VSpmA",3.5)
         )
         moviesList.add(
-            MovieModel(R.drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
+            MovieModel(
+              drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
                 "Action", "Russo Brother","2022",
                 "Hello This is a movie","JfVOs4VSpmA",5.0)
         )
         moviesList.add(
-            MovieModel(R.drawable.the_batman, "The Batman", "2h30m",
+            MovieModel(
+              drawable.the_batman, "The Batman", "2h30m",
                 "Action", "Kevin","2022",
                 "Hello This is a movie","JfVOs4VSpmA",3.5)
         )
         moviesList.add(
-            MovieModel(R.drawable.the_irishman, "The Irishman", "3h",
+            MovieModel(
+              drawable.the_irishman, "The Irishman", "3h",
                 "Mystery", "Abdelrahman","2019",
                 "Hello This is a movie","JfVOs4VSpmA",2.5)
         )

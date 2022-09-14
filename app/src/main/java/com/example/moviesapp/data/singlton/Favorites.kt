@@ -1,6 +1,6 @@
 package com.example.moviesapp.data.singlton
 
-import com.example.moviesapp.presentation.ViewModels.MovieModel
+import com.example.moviesapp.data.Models.MovieModel
 
 class favorites {
 
