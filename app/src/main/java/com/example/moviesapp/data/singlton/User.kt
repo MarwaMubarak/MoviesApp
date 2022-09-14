@@ -1,6 +1,6 @@
 package com.example.moviesapp.data.singlton
 
-class user {
+class User {
     companion object{
         private var username:String=""
         private var userId :String=""
