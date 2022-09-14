@@ -39,8 +39,11 @@ class MovieActivity : YouTubeBaseActivity() {
             val textViewDescription : TextView =  findViewById(R.id.tv_movie_description)
             val textViewRating : TextView =  findViewById(R.id.tv_movie_rating)
             val favBtn:Button = findViewById(R.id.btn_addToFavourites)
-            if(favList.found(movie!!)){
+            if(favList.found(movie)){
                 favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_24))
+            }
+            else{
+                favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_border_24))
             }
             val Mname = movie.name
             val Mcategory = movie.category
