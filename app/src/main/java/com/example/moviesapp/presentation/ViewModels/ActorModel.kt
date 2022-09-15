@@ -4,7 +4,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class ActorModel(
-    val image:Int,
-    val name:String,
-    val id:Int,
-    val moviesList:ArrayList<MovieModel>):Parcelable
+    val image:String?,
+    val name:String?,
+    val id:Int?,
+    val moviesList:ArrayList<MovieModel>?
+    ):Parcelable

@@ -1,5 +1,6 @@
 package com.example.moviesapp.data.Models
 
+
 import com.google.gson.annotations.SerializedName
 
 

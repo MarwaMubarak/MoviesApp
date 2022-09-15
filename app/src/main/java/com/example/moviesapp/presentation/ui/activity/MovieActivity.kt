@@ -31,7 +31,7 @@ class MovieActivity : YouTubeBaseActivity() {
 
         val movie = intent.getParcelableExtra<MovieModel>("Movie")
 
-        if(movie != null){
+        if(movie != null){s
             val textViewName : TextView =  findViewById(R.id.tv_movie_name)
             val textViewCategory : TextView =  findViewById(R.id.tv_movie_category)
             val textViewYear : TextView =  findViewById(R.id.tv_movie_year_time)
@@ -52,7 +52,10 @@ class MovieActivity : YouTubeBaseActivity() {
             val Mdirector = movie.director
             val Mrating = movie.rating
             val Mdescr = movie.description
-            val Mtrailer = movie.trailer
+            val Mtrailer = movie.trailer?.substring(30)
+            println("-------------------------------------------------------------------------")
+            println(Mtrailer)
+            println("-------------------------------------------------------------------------")
 
             textViewName.text = Mname
             textViewCategory.text = Mcategory

@@ -24,7 +24,7 @@ class MoviesListAdapter(var moviesList:List<MoviesResponse?>?)
         val time: TextView = itemView.findViewById(R.id.tv_time)
         val category: TextView = itemView.findViewById(R.id.tv_category)
         val year: TextView = itemView.findViewById(R.id.tv_year)
-//        val rating: RatingBar = itemView.findViewById(R.id.rat_score)
+//      val rating: RatingBar = itemView.findViewById(R.id.rat_score)
         val tvRating : TextView = itemView.findViewById((R.id.tv_rating))
 
 

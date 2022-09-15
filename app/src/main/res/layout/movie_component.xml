@@ -37,7 +37,7 @@
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:text="Spiderman: No Way Home"
-            android:textColor="@color/big_txt"
+            android:textColor="@color/btn_icon"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

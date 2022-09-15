@@ -33,7 +33,7 @@
             android:layout_marginBottom="500dp"
             android:gravity="center_vertical"
             android:text="Actor Name"
-            android:textColor="@color/big_txt"
+            android:textColor="@color/btn_icon"
             android:textSize="20dp" />
 
         <!--        <TextView-->
@@ -54,23 +54,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginBottom="418dp"
-            android:text="Movies :"
-            android:textColor="@color/white" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="465dp"
+            android:text="Movies"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/moviesList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginBottom="363dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:text="ahhh"
-            android:textColor="@color/white" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movies_in_actor"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="280dp"
+            android:layout_centerHorizontal="true"
+            tools:listitem="@layout/movie_component">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!--        <TextView-->
+<!--            android:id="@+id/moviesList"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="50dp"-->
+<!--            android:layout_marginBottom="363dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:text="ahhh"-->
+<!--            android:textColor="@color/white" />-->
 
 
     </RelativeLayout>

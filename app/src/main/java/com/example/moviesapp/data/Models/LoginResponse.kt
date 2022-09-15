@@ -1,3 +1,9 @@
 package com.example.moviesapp.data.Models
 
-data class LoginResponse(val id:String)
+import com.google.gson.annotations.SerializedName
+
+data class LoginResponse (
+    @SerializedName("id") val id: Int,
+    @SerializedName("userName") val userName:String,
+    @SerializedName("password") val password:String,
+    @SerializedName("email") val email:String)

@@ -51,7 +51,7 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        
+
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -88,8 +88,6 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
             override fun onFailure(call: Call<ArrayList<MoviesResponse>>, t: Throwable) {
                 Toast.makeText(requireContext(),t.localizedMessage, Toast.LENGTH_SHORT).show()
             }
-
-
 
         })
     }

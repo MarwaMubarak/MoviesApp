@@ -10,7 +10,7 @@ import com.example.moviesapp.R
 import com.example.moviesapp.presentation.ViewModels.MovieModel
 import com.squareup.picasso.Picasso
 
-class FavListAdapter(private val moviesList:ArrayList<MovieModel>)
+class FavListAdapter(private val moviesList:List<MovieModel>)
     : RecyclerView.Adapter<FavListAdapter
 .MoviesViewHolder>()
 {

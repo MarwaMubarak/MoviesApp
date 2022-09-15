@@ -1,6 +1,8 @@
 package com.example.moviesapp.data.Models
 
-data class RegisterRequest(
-    val username:String,
-    val email:String,
-    val password:String )
+import com.google.gson.annotations.SerializedName
+
+data class RegisterRequest (
+    @SerializedName("userName") val userName:String,
+    @SerializedName("password") val password:String,
+    @SerializedName("email") val email:String)
