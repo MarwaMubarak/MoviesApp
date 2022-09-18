@@ -36,7 +36,7 @@ class ActorsFragment : Fragment(R.layout.fragment_actors) {
 
     private lateinit var actorsAdapter: ActorsListAdapter
     private lateinit var recyclerView: RecyclerView
-    var actorsList: ArrayList<ActorsResponse>?=null
+    var actorsList: ArrayList<ActorsResponse>? = null
     var moviesList: ArrayList<MovieModel> = ArrayList()
 
 
@@ -53,11 +53,12 @@ class ActorsFragment : Fragment(R.layout.fragment_actors) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        actorsAdapter= ActorsListAdapter(listOf())
-        val layout =LinearLayoutManager(context)
+
+        actorsAdapter = ActorsListAdapter(listOf())
+        val layout = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.rv3)
-        recyclerView.layoutManager=layout
-        recyclerView.adapter=actorsAdapter
+        recyclerView.layoutManager = layout
+        recyclerView.adapter = actorsAdapter
         recyclerView.setHasFixedSize(true)
         moviesList = ArrayList()
         actorsList = ArrayList()
@@ -77,25 +78,26 @@ class ActorsFragment : Fragment(R.layout.fragment_actors) {
 
     private fun getData() {
         service.getAllActors().enqueue(object : Callback<ArrayList<ActorsResponse>> {
-            override fun onResponse(call: Call<ArrayList<ActorsResponse>>, response: Response<ArrayList<ActorsResponse>>) {
 
-                println("-------------------------------------------------------------------------")
-                println(response.code())
-                println("-------------------------------------------------------------------------")
+            override fun onResponse(
+                call: Call<ArrayList<ActorsResponse>>,
+                response: Response<ArrayList<ActorsResponse>>
+            ) {
 
                 if (response.isSuccessful) {
-                    actorsAdapter.actorsList=response.body()
-                    actorsList= response.body()
-                    recyclerView?.adapter=actorsAdapter
+                    actorsAdapter.actorsList = response.body()
+                    actorsList = response.body()
+                    recyclerView?.adapter = actorsAdapter
                 }
 
             }
 
             override fun onFailure(call: Call<ArrayList<ActorsResponse>>, t: Throwable) {
-                Toast.makeText(requireContext(),t.localizedMessage, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), t.localizedMessage, Toast.LENGTH_SHORT).show()
             }
 
-        })    }
+        })
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -126,98 +128,3 @@ class ActorsFragment : Fragment(R.layout.fragment_actors) {
     }
 }
 
-//        moviesList.add(
-//            MovieModel(
-//                image = R.drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
-//                "Action", "Russo Brother", "2019",
-//                "Hello This is a movie", "JfVOs4VSpmA", 5.0
-//            )
-//        )
-//        moviesList.add(
-//            MovieModel(
-//                R.drawable.joker, "Joker", "2h",
-//                "Comedy", "Steven", "2020",
-//                "Hello This is a movie", "JfVOs4VSpmA", 3.5
-//            )
-//        )
-//        moviesList.add(
-//            MovieModel(
-//                R.drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
-//                "Action", "Russo Brother", "2022",
-//                "Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgr movie", "JfVOs4VSpmA", 5.0
-//            )
-//        )
-//        moviesList.add(
-//            MovieModel(
-//                R.drawable.the_batman, "The Batman", "2h30m",
-//                "Action", "Kevin", "2022",
-//                "Hello This is a movie", "JfVOs4VSpmA", 3.5
-//            )
-//        )
-//        moviesList.add(
-//            MovieModel(
-//                R.drawable.the_irishman, "The Irishman", "3h",
-//                "Mystery", "Abdelrahman", "2019",
-//                "Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgra movie", "JfVOs4VSpmA", 2.5
-//            )
-//        )
-
-//
-//
-//actorsList = ArrayList()
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)
-//actorsList.add(
-//ActorModel(
-//name = "Kareem Abdelaziz",
-//image = R.drawable.download,
-//id = 1,
-//moviesList = moviesList
-//)
-//)

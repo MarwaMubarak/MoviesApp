@@ -19,8 +19,6 @@ class ActorsListAdapter(var actorsList:List<ActorsResponse?>?)
      class ActorsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
          val image: ImageView = itemView.findViewById(R.id.profile_image)
          val name: TextView = itemView.findViewById(R.id.tv_name)
-        // val movies: TextView = itemView.findViewById(R.id.moviesList)
-
 
      }
     override fun onCreateViewHolder(
@@ -35,9 +33,6 @@ class ActorsListAdapter(var actorsList:List<ActorsResponse?>?)
         val actor1 =actorsList?.get(position)
         holder.name.text=actor1?.actorName
         Picasso.get().load(actor1?.actorImageUrl).into(holder.image)
-
-//        holder.image.setImageResource(actorsList[position].image)
-// holder.movies.text=actorsList[position].moviesList
 
         var movies:ArrayList<MovieModel> = ArrayList()
         for (x in actor1!!.actorMovies ){

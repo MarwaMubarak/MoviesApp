@@ -19,9 +19,9 @@ class MovieActivity : YouTubeBaseActivity() {
 
     private var favList = Favorites()
     private lateinit var youTubePlayer: YouTubePlayerView
-    private lateinit var btnPlay : Button
+    private lateinit var btnPlay: Button
 
-    lateinit var youTubePlayerInit : YouTubePlayer.OnInitializedListener
+    lateinit var youTubePlayerInit: YouTubePlayer.OnInitializedListener
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +31,17 @@ class MovieActivity : YouTubeBaseActivity() {
 
         val movie = intent.getParcelableExtra<MovieModel>("Movie")
 
-        if(movie != null){
-            val textViewName : TextView =  findViewById(R.id.tv_movie_name)
-            val textViewCategory : TextView =  findViewById(R.id.tv_movie_category)
-            val textViewYear : TextView =  findViewById(R.id.tv_movie_year_time)
-            val textViewDirector : TextView =  findViewById(R.id.tv_movie_director)
-            val textViewDescription : TextView =  findViewById(R.id.tv_movie_description)
-            val textViewRating : TextView =  findViewById(R.id.tv_movie_rating)
-            val favBtn:Button = findViewById(R.id.btn_addToFavourites)
-            if(favList.found(movie)){
+        if (movie != null) {
+            val textViewName: TextView = findViewById(R.id.tv_movie_name)
+            val textViewCategory: TextView = findViewById(R.id.tv_movie_category)
+            val textViewYear: TextView = findViewById(R.id.tv_movie_year_time)
+            val textViewDirector: TextView = findViewById(R.id.tv_movie_director)
+            val textViewDescription: TextView = findViewById(R.id.tv_movie_description)
+            val textViewRating: TextView = findViewById(R.id.tv_movie_rating)
+            val favBtn: Button = findViewById(R.id.btn_addToFavourites)
+            if (favList.found(movie)) {
                 favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_24))
-            }
-            else{
+            } else {
                 favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_border_24))
             }
             val Mname = movie.name
@@ -53,9 +52,6 @@ class MovieActivity : YouTubeBaseActivity() {
             val Mrating = movie.rating
             val Mdescr = movie.description
             val Mtrailer = movie.trailer?.substring(30)
-            println("-------------------------------------------------------------------------")
-            println(Mtrailer)
-            println("-------------------------------------------------------------------------")
 
             textViewName.text = Mname
             textViewCategory.text = Mcategory
@@ -68,7 +64,7 @@ class MovieActivity : YouTubeBaseActivity() {
 
             btnPlay = findViewById(R.id.btnPlay)
 
-            youTubePlayerInit = object :  YouTubePlayer.OnInitializedListener {
+            youTubePlayerInit = object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
                     p0: YouTubePlayer.Provider?,
                     p1: YouTubePlayer?,
@@ -76,19 +72,23 @@ class MovieActivity : YouTubeBaseActivity() {
                 ) {
                     p1?.loadVideo(Mtrailer)
                 }
-                override fun onInitializationFailure(p0: YouTubePlayer.Provider?, p1: YouTubeInitializationResult?) {
+
+                override fun onInitializationFailure(
+                    p0: YouTubePlayer.Provider?,
+                    p1: YouTubeInitializationResult?
+                ) {
                     Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
                 }
             }
-            btnPlay.setOnClickListener{
+            btnPlay.setOnClickListener {
                 youTubePlayer.initialize(YOUTUBE_API_KEY, youTubePlayerInit)
             }
 
             favBtn.setOnClickListener {
-                if(!favList.found(movie)) {
+                if (!favList.found(movie)) {
                     favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_24))
                     favList.add(movie)
-                }else{
+                } else {
                     favBtn.setBackgroundDrawable(favBtn.context.resources.getDrawable(R.drawable.ic_baseline_favorite_border_24))
                     favList.remove(movie)
                 }

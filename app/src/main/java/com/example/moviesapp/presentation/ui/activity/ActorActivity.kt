@@ -20,29 +20,31 @@ class ActorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_actor)
 
         val actor = intent.getParcelableExtra<ActorModel>("Actor")
-        if(actor!=null){
-            val acName =actor.name
-            val acImage=actor.image
+
+        if (actor != null) {
+            val acName = actor.name
+            val acImage = actor.image
 
 
-            val name :TextView = findViewById(R.id.actor_name)
-            val image : CircleImageView = findViewById(R.id.profile_image)
-            val moviesRec :RecyclerView = findViewById(R.id.rv_movies_in_actor)
+            val name: TextView = findViewById(R.id.actor_name)
+            val image: CircleImageView = findViewById(R.id.profile_image)
+            val moviesRec: RecyclerView = findViewById(R.id.rv_movies_in_actor)
 
-            moviesAdapter=FavListAdapter(listOf())
+            moviesAdapter = FavListAdapter(listOf())
             val layout = LinearLayoutManager(this)
-            moviesRec.layoutManager=layout
-            moviesRec.adapter=moviesAdapter
-            val acMovies=actor.moviesList
-            moviesAdapter=FavListAdapter(acMovies!!)
-            moviesRec.adapter=moviesAdapter
+            moviesRec.layoutManager = layout
+            moviesRec.adapter = moviesAdapter
+            val acMovies = actor.moviesList
+            moviesAdapter = FavListAdapter(acMovies!!)
+            moviesRec.adapter = moviesAdapter
             moviesAdapter.onItemClick = {
                 val intent = Intent(this, MovieActivity::class.java)
                 intent.putExtra("Movie", it)
                 startActivity(intent)
             }
             Picasso.get().load(acImage).into(image)
-            name.text=acName
+
+            name.text = acName
 
 
         }

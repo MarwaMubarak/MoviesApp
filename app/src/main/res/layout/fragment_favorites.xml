@@ -6,22 +6,21 @@
     tools:context=".presentation.ui.fragment.FavoritesFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_fav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
-        android:id="@+id/nav_fav"
-        >
+        android:background="@color/background">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_fav"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:listitem="@layout/movie_component"
+            android:layout_margin="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="22dp">
+            tools:listitem="@layout/movie_component">
 
         </androidx.recyclerview.widget.RecyclerView>
 

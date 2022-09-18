@@ -24,10 +24,10 @@ private const val ARG_PARAM2 = "param2"
  * Use the [FavoritesFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
+class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
     private lateinit var recyclerView: RecyclerView
     private lateinit var favAdapter: FavListAdapter
-    private val fav= Favorites()
+    private val fav = Favorites()
 
 
     // TODO: Rename and change types of parameters
@@ -40,8 +40,12 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        if(fav.getAllList().size==0){
-            Toast.makeText(context,"Empty List! Add Movies to Favorites List.. ",Toast.LENGTH_SHORT).show()
+        if (fav.getAllList().size == 0) {
+            Toast.makeText(
+                context,
+                "Empty List! Add Movies to Favorites List.. ",
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
@@ -60,9 +64,8 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites ) {
         }
 
 
-
-
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

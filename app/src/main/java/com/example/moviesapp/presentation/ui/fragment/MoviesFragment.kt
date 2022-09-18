@@ -34,8 +34,8 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
 
     private lateinit var moviesAdapter: MoviesListAdapter
     private lateinit var recyclerView: RecyclerView
-    var moviesList1: ArrayList<MoviesResponse>?=null
-    var liveData :ArrayList<MovieModel>?=null
+    var moviesList1: ArrayList<MoviesResponse>? = null
+    var liveData: ArrayList<MovieModel>? = null
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -53,14 +53,15 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         super.onSaveInstanceState(outState)
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        moviesAdapter=MoviesListAdapter(listOf())
+        moviesAdapter = MoviesListAdapter(listOf())
 
-        val layout =LinearLayoutManager(context)
+        val layout = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.rv_movie)
-        recyclerView.layoutManager=layout
-        recyclerView.adapter=moviesAdapter
+        recyclerView.layoutManager = layout
+        recyclerView.adapter = moviesAdapter
 
         moviesList1 = ArrayList()
         getData()
@@ -75,22 +76,26 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
 
 
     }
+
     private fun getData() {
         service.getAllMovies().enqueue(object : Callback<ArrayList<MoviesResponse>> {
-            override fun onResponse(call: Call<ArrayList<MoviesResponse>>, response: Response<ArrayList<MoviesResponse>>) {
+            override fun onResponse(
+                call: Call<ArrayList<MoviesResponse>>,
+                response: Response<ArrayList<MoviesResponse>>
+            ) {
                 if (response.isSuccessful) {
-                    moviesAdapter.moviesList=response.body()
-//                    moviesList1= response.body()
-                    recyclerView?.adapter=moviesAdapter
+                    moviesAdapter.moviesList = response.body()
+                    recyclerView?.adapter = moviesAdapter
                 }
             }
 
             override fun onFailure(call: Call<ArrayList<MoviesResponse>>, t: Throwable) {
-                Toast.makeText(requireContext(),t.localizedMessage, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), t.localizedMessage, Toast.LENGTH_SHORT).show()
             }
 
         })
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -98,8 +103,6 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_movies, container, false)
     }
-
-
 
 
     companion object {
@@ -123,65 +126,3 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
     }
 }
 
-
-//moviesList1!!.add(
-//MovieModel(
-//drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
-//"Action", "Russo Brother","2019",
-//"Hello This is a movie", "JfVOs4VSpmA", 5.0)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.joker, "Joker", "2h",
-//"Comedy", "Steven","2020",
-//"Hello This is a movie", "JfVOs4VSpmA",3.5)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
-//"Action", "Russo Brother","2022",
-//"Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgr movie", "JfVOs4VSpmA",5.0)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.the_batman, "The Batman", "2h30m",
-//"Action", "Kevin","2022",
-//"Hello This is a movie","JfVOs4VSpmA", 3.5)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.the_irishman, "The Irishman", "3h",
-//"Mystery", "Abdelrahman","2019",
-//"Hello This is ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgra movie", "JfVOs4VSpmA", 2.5)
-//)
-//
-//moviesList1!!.add(
-//MovieModel(
-//drawable.avengers_endgame, "Avengers: Endgame", "3h6m",
-//"Action", "Russo Brother","2019",
-//"Hello This is a movie","JfVOs4VSpmA", 5.0)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.joker, "Joker", "2h",
-//"Comedy", "Steven","2020",
-//"Hello This is a ajshfghisgkhsgsifhgsifgsigfiwrgfigfrifgrmovie","JfVOs4VSpmA",3.5)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.spiderman_nowayhome, "Spiderman: No Way Home", "2h30m",
-//"Action", "Russo Brother","2022",
-//"Hello This is a movie","JfVOs4VSpmA",5.0)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.the_batman, "The Batman", "2h30m",
-//"Action", "Kevin","2022",
-//"Hello This is a movie","JfVOs4VSpmA",3.5)
-//)
-//moviesList1!!.add(
-//MovieModel(
-//drawable.the_irishman, "The Irishman", "3h",
-//"Mystery", "Abdelrahman","2019",
-//"Hello This is a movie","JfVOs4VSpmA",2.5)
-//)

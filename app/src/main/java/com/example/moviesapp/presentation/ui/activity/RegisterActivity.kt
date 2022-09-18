@@ -20,68 +20,76 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val username=findViewById<EditText>(R.id.et_username)
-        val email=findViewById<EditText>(R.id.et_email)
-        val password=findViewById<EditText>(R.id.et_password)
-        val confirmPassword=findViewById<EditText>(R.id.et_confirmPassword)
+        val username = findViewById<EditText>(R.id.et_username)
+        val email = findViewById<EditText>(R.id.et_email)
+        val password = findViewById<EditText>(R.id.et_password)
+        val confirmPassword = findViewById<EditText>(R.id.et_confirmPassword)
 
 
-
-        val btn=findViewById<Button>(R.id.registerBtn)
+        val btn = findViewById<Button>(R.id.registerBtn)
         btn.setOnClickListener {
-            if(username.text.isNotBlank()&&password.text.isNotBlank()&&email.text.isNotBlank()&&confirmPassword.text.isNotBlank()){
-                if(!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()){
-                    Toast.makeText(this,"Invalid Email !!", Toast.LENGTH_SHORT).show()
+            if (username.text.isNotBlank() && password.text.isNotBlank() && email.text.isNotBlank() && confirmPassword.text.isNotBlank()) {
+                if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
+                    Toast.makeText(this, "Invalid Email !!", Toast.LENGTH_SHORT).show()
 
-                }
-                else if(!password.text.toString().equals(confirmPassword.text.toString())){
-                    Toast.makeText(this,"Password does not match!!", Toast.LENGTH_SHORT).show()
+                } else if (!password.text.toString().equals(confirmPassword.text.toString())) {
+                    Toast.makeText(this, "Password does not match!!", Toast.LENGTH_SHORT).show()
 
-                }else {
-                        register(password.text.toString(),email.text.toString(),username.text.toString())
-//                    val intent = Intent(this, MainActivity::class.java)
-//                    Toast.makeText(this, "Successful Registration..", Toast.LENGTH_SHORT).show()
-//                    startActivity(intent)
+                } else {
+                    register(
+                        password.text.toString(),
+                        email.text.toString(),
+                        username.text.toString()
+                    )
                 }
-            }
-            else{
-                Toast.makeText(this,"Empty Field!!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Empty Field!!", Toast.LENGTH_SHORT).show()
             }
 
         }
 
 
 
-        val logBtn=findViewById<Button>(R.id.tv_login)
+        val logBtn = findViewById<Button>(R.id.tv_login)
         logBtn.setOnClickListener {
-            val intent1=Intent(this, LoginActivity::class.java)
+            val intent1 = Intent(this, LoginActivity::class.java)
             startActivity(intent1)
 
         }
     }
-    private fun register( _pass:String ,_email:String ,_username:String){
-        service.register(RegisterRequest(_username,_pass,_email)).enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                if (response.isSuccessful) {
-                    val resp=response.body()
-                    println("---------------------------------------------------------------")
-                    println(response.body())
-                    println("---------------------------------------------------------------")
+    private fun register(_pass: String, _email: String, _username: String) {
+        service.register(RegisterRequest(_username, _pass, _email))
+            .enqueue(object : Callback<ResponseBody> {
+                override fun onResponse(
+                    call: Call<ResponseBody>,
+                    response: Response<ResponseBody>
+                ) {
 
-                    Toast.makeText(this@RegisterActivity,"Successful Registration!!",Toast.LENGTH_SHORT).show()
-                    val intent3=Intent(this@RegisterActivity, LoginActivity::class.java)
-                    startActivity(intent3)
-                }else{
-                    Toast.makeText(this@RegisterActivity,"Invalid Registration!!", Toast.LENGTH_SHORT).show()
+                    if (response.isSuccessful) {
 
+                        Toast.makeText(
+                            this@RegisterActivity,
+                            "Successful Registration!!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        val intent3 = Intent(this@RegisterActivity, LoginActivity::class.java)
+                        startActivity(intent3)
+                    } else {
+                        Toast.makeText(
+                            this@RegisterActivity,
+                            "Invalid Registration!!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
                 }
-            }
 
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                Toast.makeText(this@RegisterActivity,t.localizedMessage, Toast.LENGTH_SHORT).show()
-            }
+                override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                    Toast.makeText(this@RegisterActivity, t.localizedMessage, Toast.LENGTH_SHORT)
+                        .show()
+                }
 
-        })
+            })
     }
 
 }

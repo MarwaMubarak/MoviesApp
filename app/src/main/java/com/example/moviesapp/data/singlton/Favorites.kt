@@ -4,20 +4,23 @@ import com.example.moviesapp.presentation.ViewModels.MovieModel
 
 class Favorites {
 
-    companion object{
-        var favList :ArrayList<MovieModel> = ArrayList()
+    companion object {
+        var favList: ArrayList<MovieModel> = ArrayList()
     }
-    fun add(movieModel: MovieModel)
-    {
+
+    fun add(movieModel: MovieModel) {
         favList.add(movieModel)
     }
-    fun remove(movieModel: MovieModel){
+
+    fun remove(movieModel: MovieModel) {
         favList.remove(movieModel)
     }
-    fun getAllList():ArrayList<MovieModel>{
+
+    fun getAllList(): ArrayList<MovieModel> {
         return favList
     }
-    fun found(movieModel: MovieModel):Boolean{
+
+    fun found(movieModel: MovieModel): Boolean {
         return movieModel in favList
     }
 
